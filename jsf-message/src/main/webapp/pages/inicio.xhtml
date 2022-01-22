@@ -1,0 +1,37 @@
+<ui:composition template="../templates/master.xhtml"
+		xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:f="http://java.sun.com/jsf/core"
+		xmlns:h="http://java.sun.com/jsf/html"
+		xmlns:ui="http://java.sun.com/jsf/facelets"
+		xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+	<ui:define name="content">
+		<div style="border-bottom: 1px solid #CCC;padding:10px">
+			<h:panelGrid columns="1" columnClasses="col-1" style="width:100%;">
+				<h:outputText value="JSF Message Example" />
+			</h:panelGrid>
+		</div>
+		<div id="container">
+			<h:form id="customerForm">
+				<h:messages infoClass="info" errorClass="error" globalOnly="true" />
+				<h:panelGrid columns="1" style="width:600px;margin-left:calc(50% - 300px);margin-bottom:25px;">
+					<h:panelGrid columnClasses="col-1,col-2,col-3" columns="3" style="width:100%;">
+						<h:outputText value="Nombre:" />
+						<h:inputText id="it-nombre" value="#{exampleBean.nombre}" required="true" requiredMessage="Debe ingresar un nombre." />
+						<h:message for="it-nombre" errorClass="error" />
+					</h:panelGrid>
+					<h:panelGrid columnClasses="col-1,col-2,col-3" columns="3" style="width:100%;">
+						<h:outputText value="Apellido:" />
+						<h:inputText id="it-apellido" value="#{exampleBean.apellido}" />
+						<h:message for="it-apellido" errorClass="error" />
+					</h:panelGrid>
+					<h:panelGrid columnClasses="col-1,col-2,col-3" columns="3" style="width:100%;">
+						<h:outputText value="Edad:" />
+						<h:inputText id="it-edad" value="#{exampleBean.edad}" required="true" requiredMessage="Debe ingresar una edad." />
+						<h:message for="it-edad" errorClass="error" />
+					</h:panelGrid>
+					<h:commandButton value="Submit" action="#{exampleBean.formSubmit()}" />
+				</h:panelGrid>
+			</h:form>
+		</div>
+	</ui:define>
+</ui:composition>

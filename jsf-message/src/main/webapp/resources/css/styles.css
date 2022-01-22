@@ -1,0 +1,50 @@
+html,body {
+	margin:0;
+	padding:0;
+	height:100%;
+}
+
+#page-container {
+	min-height:calc(100% - 40px);
+	position:relative;
+}
+
+#customerForm\:submitButtom {
+	width: 272px;
+	height: 40px;
+	border-radius: 10px;
+	cursor: pointer;
+	border: none;
+}
+
+#container {
+	margin-top: 50px;
+	line-height: 16px;
+	padding: 10px;
+	font-family: arial, sans-serif;
+	border: 1px solid #CCC;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	display: inline-block;
+	width: 80%;
+	margin-left: 10%;
+	text-align: center;
+}
+
+.col-1 {
+	text-align: left;
+}
+
+.col-2 {
+	text-align: right;
+}
+
+#footer {
+	width: 100%;
+	text-align: center;
+	border-top: 1px solid #CCC;
+	margin-bottom: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
